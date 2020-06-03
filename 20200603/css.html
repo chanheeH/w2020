@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		/*@import url("style.css");*/
+		@import "style.css";
+		/*ul{color:green;}*/
+		#nav{color:white;}
+		.menu{color:black;}
+		/** < tag name < class nam < id name < inline style < !important*/
+	</style>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi illo rerum aliquid fugit et cumque repudiandae, itaque corrupti illum, inventore nobis omnis a hic recusandae odit? Error mollitia sequi id.</p>
+	<p style="color:blue">Id recusandae, rerum eum iure sit nobis ad, dolore obcaecati ullam, vel consectetur? Est, laudantium asperiores aperiam nisi voluptates accusamus omnis, porro, deserunt nemo optio facilis obcaecati dignissimos quae debitis.</p>
+	<p style="color:skyblue;font-size:30px;">Porro velit, blanditiis voluptatibus ipsam nam dicta ex ratione odit perferendis rem maxime ipsum commodi debitis labore. Mollitia suscipit provident dolorum aut, deleniti, quisquam labore qui, natus, minima commodi ad.</p>
+	<p>Vitae atque, omnis libero, ducimus quod quam quibusdam explicabo, eos totam provident quis in quidem sequi officiis molestiae reiciendis fugiat quas quo odio eligendi deserunt perferendis reprehenderit minima? Deleniti, at.</p>
+
+	<!-- ul#nav>li.menu*5>{menu} -->
+	<ul id="nav">
+		<li class="menu" style="color:red">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+	</ul>
+
+	<!-- ul#nav1>li.menu1*5>{menu} -->
+	<style>
+		#nav1>li{color:red;}
+		ul#nav1>li{color:red;}
+		ul#nav1 li{color:red;}
+		ul#nav1>li>a{color:red;}
+		ul#nav1 a{color:red;}
+	</style>
+	<ul id="nav1">
+		<li><a href="#">menu</a></li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+	</ul>
+
+	<header id="header">
+		<h1>logo</h1>
+		<nav id="nav">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>
