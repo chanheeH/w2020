@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:visited,a:link{color:#333;text-decoration: none;}
+		li{list-style:none;}
+
+		body{background-color: #eee;}
+
+
+		/*nav*/
+		#nav{width:1000px;height:50px;background-color: #aaa;margin-left:auto;margin-right:auto;}
+		/*margin은전체고margin-top이나margin-right는각각주는거*/
+		/*margin:0 auto는 margin-left:auto;margin-right:auto랑같이 센터정렬됨;*/
+
+		#nav>ul>li{float:left;width:200px;height: 50px;background-color: #f00;}
+		#nav>ul>li>a{display:block;text-align:center;line-height: 50px}
+		#nav>ul>li>a:hover{background-color:green;color:#fff;}
+		/*#nav>ul>li:hover{background-color: #f00;}*/
+
+		/*#nav>ul>li{float:left;width:200px;height:50px;}
+		#nav>ul>li:hover{background-color:skyblue;} 
+		#nav>ul>li>a{display:block;line-height:50px;text-align:center;}*/
+
+		
+	</style>
+</head>
+<body>
+	<nav id="nav">
+		<!-- ul>li*5>a[#]>{menu$} -->
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

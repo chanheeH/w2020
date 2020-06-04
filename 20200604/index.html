@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>selector</title>
+	<style>
+		/*h3{color:brown;}*/
+		/*h3,li{color:red;}*/
+		*{margin: 0;padding: 0;} /*padding은 안쪽여백, margin은 바깥쪽여백*/
+		a:visited{color: #000;}
+		a:link{color: #000;}
+		a{text-decoration:none;} /*a:link{color:#000;text-decoration: none;} 은 위에랑 이거 합쳐서 쓰는법*/
+
+
+		/*header*/
+			.main{background-color: #ff0;} /*body.main하고.main으로해도같음 대신띄어쓰면안됨*/
+			.warning{color: #f00;}
+			#list{background-color:mistyrose;}
+			#list>li{color:gray;}
+			#list>li.active{color: #f00;}
+			div>strong{background-color:white;}
+			ul>li>strong{background-color: #000;}  /*ul strong{background-color: #00f;} 같은거임*/
+			ul#list strong{background-color: #f00;} /*위에꺼(tag)보다 id값이 우선순위라이게적용됨*/
+			#list>li:hover{background-color: #ddd;}
+			#list>li:active{background-color: #f00;}
+	</style>
+</head>
+<body class="main">
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem <strong>ipsum</strong> dolor.</div>
+		<ul id="list">
+			<li class="active"><a href="https://www.naver.com">네이버</a>
+			</li>
+			<li><strong><a href="https://www.daum.net">다음</a></strong>
+			</li>
+			<li>javascript</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit.</div>
+	</div>
+</body>
+</html>
