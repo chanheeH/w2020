@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+
+		a:link{color:#000;text-decoration:none}
+		a:visited{color:#000;text-decoration:none} /* 같은 a에 스타일 넣기 때문에 a:link,a:visited{color:#000;}해도 가능*/
+
+		li{list-style:none;}
+
+		ul.list>li{background-color:skyblue; width: 200px;} /* ul.list 랑 .list 랑 같음*/
+
+		ul.list>li>a{display:block;text-align:center;line-height: 30px} /* display:block은 li태그의 크기만큼 블럭단위 요소로 바뀌어 마우스 올려놨을 때 클릭 가능한 상태로 바뀜 */ /* line-height는 글자 사이의 간격 조정 */ /*dv 누르면 display:block 됨*/
+
+		ul.list>li>a:hover{background-color:orange;color:#fff;} /* hover는 마우스 가져다 두었을 때 컬러 */
+
+		ul.list>li.blue{background-color:#00f;}
+		ul.list>li:nth-child(5){background-color: #f00;} /* 특정한 li에만 스타일 주고 싶을 때 클래스 이름을 주고 스타일 주던지, nth-child(순서)로 스타일 줄 수 있음 */ /* 짝수 순서는 2n, 홀수 순서는 2n+1로 사용가능 */
+
+		ul.list>li:first-child{background-color: #ff0;} /* 첫번째 li에 스타일 */
+		ul.list>li:last-child{background-color: #ff0;} /* 마지막 li에 스타일 */ /* 첫번째랑 마지막 li에 같은 스타일 주기 때문에 쉼표로 사용 가능 */
+
+		.blue{background-color:gray !important;} /* !important를 넣을 경우 다른 스타일 보다 우선 적용됨 */
+
+		/* 우선 적용 순서 : * < tagname < class < id < inline style (body 안에 스타일 주는 것) < !important (오른쪽으로 갈수록 우선 적용) */ 
+		
+		div.box{width: 300px;height: 300px;background-color:gray;} /*div태그는 공간 분할 태그 (문서나 이미지 감쌀 때 사용)*/ /*span태그도 공간 분할 태그이지만 inline tag*/
+
+		div.box:after{content:"!!!";color:white;}
+
+	</style>
+</head>
+<body>
+	<!-- ul.list>li*10>a[#]>{list$} -->
+	<ul class="list">
+		<li><a href="#">list1</a></li>
+		<li><a href="#">list2</a></li>
+		<li><a href="#">list3</a></li>
+		<li><a href="#">list4</a></li>
+		<li class="blue"><a href="#">list5</a></li>
+		<li><a href="#">list6</a></li>
+		<li><a href="#">list7</a></li>
+		<li><a href="#">list8</a></li>
+		<li><a href="#">list9</a></li>
+		<li><a href="#">list10</a></li>
+	</ul>
+
+	<div class="box">안녕하세요</div> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float menu</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color:#000;text-decoration: none;}
+		li{list-style: none;}
+
+		/*menu*/
+		nav.navWrap{width: 1000px;background-color:skyblue;margin: 0 auto;margin-bottom: 10px} /*margin: 0 auto 넣으면 화면이 크던 작던 가운데정렬*/
+		.navWrap>ul:after{content:"";display: block;clear:both;}
+		.navWrap>ul>li{float:left;width: 16.666%} /* ctrl + shift + Y 누르면 계산해줌 > 1000/5 ctrl+shift+y 면 200으로 나누기 해줌*/  /*퍼센트는p*/
+		.navWrap>ul>li>a{display: block; line-height: 50px;text-align:center;}
+		.navWrap>ul>li>a:hover{background-color:blue;color:white;}
+		/*.visual Wrapper*/
+		div.visualWrap{height: 400px;background-color:orange;}
+	</style>
+</head>
+<body>
+	<nav class="navWrap">
+		<!-- ul>li*5>a[#]>{MENU$} -->
+		<ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+			<li><a href="#">MENU6</a></li>
+		</ul>
+	</nav>
+	<div class="visualWrap"></div>
+</body>
+</html>

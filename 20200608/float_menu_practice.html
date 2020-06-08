@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float menu practice</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color:#000; text-decoration: none;}
+		li{list-style: none;}
+
+		/*menu*/
+		nav.navWrap{width:1000px;background-color:skyblue;margin: 0 auto;}
+		.navWrap>ul:after{content:"";display:block;clear:both;}
+		.navWrap>ul>li{float:left;width: 200px;}
+		.navWrap>ul>li>a{display:block; line-height: 50px;text-align: center;}
+	</style>
+</head>
+<body>
+	<nav class="navWrap">
+		<ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
