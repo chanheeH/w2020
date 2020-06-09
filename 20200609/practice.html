@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:link,a:visited{color: #000;;text-decoration: none}
+		li{list-style: none}
+		
+		/*header*/
+		div.headerTop{width: 980px;height: 75px;margin: 0 auto;}
+		div.headerTop>h1.himedia{text-align: center;line-height: 75px}
+		div.menu{background-color: #00f;}
+		div.menu>nav.menu{width: 980px;margin: 0 auto;}
+		div.menu>nav.menu>ul:after{content:"";display: block;clear:both;}
+		div.menu>nav.menu>ul>li{float:left;width: 163.3333px;box-sizing: border-box;border-right: 1px solid #fff}
+		div.menu>nav.menu>ul>li>a{color:white;display: block;text-align: center;height: 45px;line-height: 45px;}
+		div.menu>nav.menu>ul>li:nth-child(1){border-left: 1px solid #fff}
+		div.menu>nav.menu>ul>li:hover{background-color:skyblue; font-weight:bold;}
+	</style>
+</head>
+<body>
+	<div class="headerTop">
+		<h1 class="himedia"><a href="#">himedia</a></h1>
+	</div>
+	<div class="menu">
+		<nav class="menu">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">사업영역</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">사회공헌</a></li>
+				<li><a href="#">인재채용</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>

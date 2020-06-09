@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box model</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none}
+
+		body{background-image: url(../images/bg_grid.gif);}
+		div.box
+		{
+			width: 180px;
+			height: 180px;
+			background-color:orange;
+			padding:10px;/*border-color:#000;border-width:10px;border-style:solid;}*/
+			border: 10px solid #000; /*bd+하면됨*/
+			box-sizing:border-box;}
+	</style>
+</head>
+<body>
+	<div class="box">test</div>
+</body>
+</html>
