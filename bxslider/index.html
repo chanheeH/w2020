@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<!-- script:src -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<!-- 밑에있는 스크립트 언어들이 위로 오면 안됨. 항상 이게↑ 제일 위 (배포용 프로그램 *필수*) (밑에 슬라이드 만드려고 스크립트 $(jquery)사용 시 이거 꼭 필요)-->
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true});
+		}); 
+		// 달러(jquery)를 쓰고 소괄호를 쓰면 소괄호 안에 있는게 선택되어 작동 되는 것 < $(document).ready(함수(){}); 중요(문서를 준비시키는 것) (이벤트실행) >    $("선택자").bxSlider(); 넣으면 슬라이드가 나옴 {전체적인 의미는 문서가 준비가 되면 슬라이드를 만들겠다}
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

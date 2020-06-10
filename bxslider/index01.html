@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0; box-sizing: border-box;}
+		a:link,a:visited{color:#000;text-decoration: none}
+		li{list-style: none}
+	</style>
+	<link rel="stylesheet" href="css/jquery.bxslider.css"> <!-- 외부스타일시트 링크형태로 사용 시 link -->
+	<script src="js/jquery-3.1.1.min.js"></script> <!-- 소스형태로 들어갈 때 script  script:src tap 누르고 경로쓰기-->
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		div.visual{width: 1200px;height: 500px;margin: 0 auto;}
+		nav.gnbWrap{width: 1200px;margin: 0 auto;border-top:3px solid #ddd;border-bottom: 1px solid #ddd;}
+		nav.gnbWrap>ul:after{content:"";clear:both;display: block;}
+		nav.gnbWrap>ul>li{float:left;width: 20%;}
+		nav.gnbWrap>ul>li>a{display: block;text-align: center;line-height: 45px;}
+		nav.gnbWrap>ul>li>a:hover{background-color:#ddd;color:white;font-weight: bold;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true}); //li에 사용할 것이기 때문에 부모인 ul에 준 class를 선택자로 사용*/ /*auto:true를 넣을 시 자동으로 슬라이드가 넘어감//
+		});
+	</script>
+</head>
+<body>
+	<nav class="gnbWrap">
+		<ul>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+		</ul>
+	</nav>
+
+	<div class="visual">
+		<ul class="slider">
+			<li> <img src="images/pc01.jpg" alt="image1"> </li>
+			<li> <img src="images/pc02.jpg" alt="image2"> </li>
+			<li> <img src="images/pc03.jpg" alt="image3"> </li>
+		</ul>
+	</div>
+</body>
+</html>

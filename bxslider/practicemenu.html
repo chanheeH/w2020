@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practicemenu</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none}
+
+		div.gnbWrap{background-color:red;margin: 0 auto;}
+		div.gnbWrap>ul{text-align: center;margin: 0 auto;border-top: 3px solid #000; border-bottom: 3px solid #000;}
+		div.gnbWrap>ul:after{content:"";display: block;clear:both;}
+		div.gnbWrap>ul>li{float:left;width: 20%;border-right: 2px solid #00f}
+		div.gnbWrap>ul>li>a{line-height: 45px;text-align: center;display: block;color:white;}
+		div.gnbWrap>ul>li>a:hover{background-color:blue;color:white;font-weight: bold}
+		div.gnbWrap>ul>li:nth-child(1){border-left: 2px solid #00f}
+
+	</style>
+</head>
+<body>
+	<div class="gnbWrap">
+		<ul class="menu">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+</body>
+</html>
