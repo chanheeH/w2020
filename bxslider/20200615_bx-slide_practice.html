@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bxslide_practice</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				controls:false,
+				pagerCustom:".pager"
+
+			})
+		})
+	</script>
+	<style>
+	.Wrapper{position: relative;width: 1260px;margin: 0 auto;}
+	.sliderWrap{
+		width: 1260px;
+		margin: 0 auto;
+	}
+	img{
+		width: 1260px;
+		height: 700px;
+	}
+	.sliderWrap .text{
+		background-color:orange;
+		position: absolute;
+		top:10px;
+		right:30px;
+		width: 400px;
+	}
+	.sliderWrap .text h2{
+		font-size:30px;
+		font-weight: bold
+	}
+	.sliderWrap .text h2:after{
+		content:"";
+		display: block;
+		height: 3px;
+		background-color:pink;
+		margin: 10px 0px;}
+	.sliderWrap .text h2:before{
+		content:"";
+		display: block;
+		height: 3px;
+		background-color:pink;
+		margin: 10px 0px;}
+	.sliderWrap .text p{
+		color:white;
+		margin-bottom: 20px
+	}
+	.sliderWrap .text a:hover{
+		background-color:pink;
+		color:white;}
+
+	.pager{position: absolute;bottom:0;width: 100%;}
+	.pager a{
+		background-color:green;
+		display: block;
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		line-height: 50px;
+	}
+	.pager a:hover{background-color:gray;}
+	.pager a.active{background-color:black;color:white;}
+	</style>
+</head>
+<body>
+	<div class="Wrapper">
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li>
+					<img src="images/main_slider.jpg" alt="">
+					<div class="text">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, provident!</p>
+						<a href="#">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/visual_20200529.jpg" alt="">
+					<div class="text">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, consequatur!</p>
+						<a href="#">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/visual2.jpg" alt="">
+					<div class="text">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, exercitationem.</p>
+						<a href="#">바로가기</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="pager clearfix">
+			<a href="#" data-slide-index="0">menu1</a>
+			<a href="#" data-slide-index="1">menu2</a>
+			<a href="#" data-slide-index="2">menu3</a>
+		</div>
+	</div>
+</body>
+</html>
