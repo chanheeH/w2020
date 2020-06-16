@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>transition</title>
+   <link rel="stylesheet" href="../css/reset.css">
+   <style>
+      .box{
+         width: 100px;height: 100px;
+         background-color: #f00;
+         transition-duration: 1s;
+         /*transition-delay:1s;*/
+         /*transition-property: height;*/
+         transition-timing-function:linear;}
+      .box:hover{
+         width: 300px;
+         background-color: #ff0;}
+      
+      .box1{
+         width: 100px;height: 100px;
+         background-color: #f00;
+         transition-duration:1s;
+         transition-timing-function:linear;} /*직선*/
+      .box1:hover{
+         width: 300px;
+         background-color: #ff0;}
+   
+      .box2{
+         width: 100px;height: 100px;
+         background-color: #f00;
+         transition-duration: 1s;
+         transition-timing-function:ease;} /*빨랐다가느려짐*/
+      .box2:hover{
+         width: 300px;
+         background-color: #ff0;}
+
+   
+      .box3{
+         width: 100px;height: 100px;
+         background-color: #f00;
+         transition-duration: 1s;
+         transition-timing-function:ease-in;} /*느렸다가빨라짐*/
+      .box3:hover{
+         width: 300px;
+         background-color: #ff0;}
+      
+      .box4{
+         width: 100px;height: 100px;
+         background-color: #f00;
+         transition-duration: 1s;
+         transition-timing-function:ease-out;}
+      .box4:hover{
+         width: 300px;
+         background-color: #ff0;}
+   </style>
+</head>
+<body>
+   <div class="box"></div>
+   <div class="box1"></div>
+   <div class="box2"></div>
+   <div class="box3"></div>
+   <div class="box4"></div>
+</body>
+</html>
