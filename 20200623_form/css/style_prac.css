@@ -1,0 +1,25 @@
+@charset "utf-8";
+body{
+	background: #ddd;
+}
+.wrap{
+	width: 500px;
+	margin: 0 auto;
+	_background:pink;
+}
+#header{
+	padding:60px 0;
+}
+#header h1{
+	margin: 0 auto;
+	width: 250px;
+	_background:green;
+	background-image: url(../images/pc_sp_join.png);
+	background-repeat: no-repeat;
+	background-position: 0 -108px;
+}
+#header h1 a{
+	text-indent: -9999px;
+	line-height: 44px;
+	display: block;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		})
+	</script>
+	<style>
+		body{font-family: 'Noto Sans KR', sans-serif;}
+		nav.gnb{
+			width: 1000px;
+			margin: 0 auto;
+			background:skyblue;
+			position: relative;
+			z-index: 1;
+		}
+		nav.gnb>ul{}
+		nav.gnb>ul>li{
+			float: left;
+			width: 200px;
+			height: 40px;
+		}
+		nav.gnb>ul>li>a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+			font-weight: bold;
+		}
+		nav.gnb>ul>li:hover{
+			background:blue;
+		}
+		/*a호버면 menu에만 호버되고 li호버면 밑에 smenu까지 호버됨*/
+		nav.gnb>ul>li:hover a{
+			color: white;
+		}
+		/*nav.gnb>ul:hover .smenu{
+			display: block;
+			border-top: 1px solid #000;
+		}*/ /*호버시 모든 메인메뉴의 서브메뉴 나옴*/
+		nav.gnb>ul>li:hover .smenu{
+			display: block;
+			border-top: 1px solid #000;
+		}    /*이거 사용 시 위 li한테 height 주면 메인메뉴만 보이고 호버 시 각각의 서브메뉴 나옴*/
+		.smenu{
+			display: none;
+		}
+		.smenu>li{
+			text-align: center;
+			line-height: 35px;
+			background:pink;
+		}
+		.smenu>li:hover{
+			background: #00ffff;
+		}
+
+
+		.visual{
+			_height: 400px;
+			background:#ddd;
+		}
+		.visual li.vimg{
+			height: 400px;
+		}
+		.visual li.vimg img{
+			position: absolute;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li>
+				<a href="#">MENU1</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0101</a></li>
+					<li><a href="#">smenu0102</a></li>
+					<li><a href="#">smenu0103</a></li>
+					<li><a href="#">smenu0104</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU2</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0202</a></li>
+					<li><a href="#">smenu0202</a></li>
+					<li><a href="#">smenu0203</a></li>
+					<li><a href="#">smenu0204</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU3</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0301</a></li>
+					<li><a href="#">smenu0302</a></li>
+					<li><a href="#">smenu0303</a></li>
+					<li><a href="#">smenu0304</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU4</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0401</a></li>
+					<li><a href="#">smenu0402</a></li>
+					<li><a href="#">smenu0403</a></li>
+					<li><a href="#">smenu0404</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU5</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0501</a></li>
+					<li><a href="#">smenu0502</a></li>
+					<li><a href="#">smenu0503</a></li>
+					<li><a href="#">smenu0504</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li class="vimg"><img src="images/pc01.jpg" alt=""></li>
+			<li class="vimg"><img src="images/pc02.jpg" alt=""></li>
+			<li class="vimg"><img src="images/pc03.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

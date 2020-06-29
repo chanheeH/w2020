@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu_practice</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+	</script>
+</head>
+	<style>
+		body{font-family: 'Noto Sans KR', sans-serif;}
+		nav.gnb{
+			width: 1000px;
+			margin: 0 auto;
+			background:orange;
+			position: relative;
+			z-index: 1;
+		}
+		nav.gnb>ul{}
+		nav.gnb>ul>li{
+			float: left;
+			width: 200px;
+			height: 40px;
+		}
+		nav.gnb>ul>li>a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+			font-weight: bold;
+		}
+		nav.gnb>ul>li:hover{
+			background:green;
+		}
+		nav.gnb>ul>li:hover a{
+			color:pink;
+		}
+		nav.gnb>ul>li:hover .smenu{
+			display: block;
+		}
+		.smenu{display: none;}
+		.smenu>li{
+			text-align: center;
+			line-height: 35px;
+			background:skyblue;
+		}
+		.smenu>li:hover{
+			background:gray;
+		}
+
+		.visual{}
+		.visual li.vimg{
+			height: 500px;
+		}
+		.visual li.vimg img{
+			width: 100%;
+			position: absolute;
+		}
+	</style>
+
+
+
+
+
+
+
+<body>
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li>
+				<a href="#">MENU1</a>
+				<ul class="smenu">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU2</a>
+				<ul class="smenu">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU3</a>
+				<ul class="smenu">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU4</a>
+				<ul class="smenu">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">MENU5</a>
+				<ul class="smenu">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li class="vimg"><img src="images/pc01.jpg" alt=""></li>
+			<li class="vimg"><img src="images/pc02.jpg" alt=""></li>
+			<li class="vimg"><img src="images/pc03.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
