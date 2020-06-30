@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pc layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- #header#main_header>h1#logo>{logo}^nav#util_menu>ul.clearfix>li*4>a[#]>{menu$}^^^^nav#main_menu>ul.clearfix>li*4>a[#]>{menu$} 는 밑에꺼 한번에 쓰는 것이고 ^는 위로 올라가는 것.-->
+
+	<!-- #header#main_header>(h1#logo>{logo})+(nav#util_menu>ul.clearfix>li*4>a[#]>{menu$})+(nav#main_menu>ul.clearfix>li*4>a[#]>{menu$}) ()묶고 +사용 하면 밑에처럼 됨 -->
+
+
+
+	<header id="main_header">
+		<h1 id="logo">logo</h1>
+		<nav id="util_menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+			</ul>
+		</nav>
+		<nav id="main_menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content" class="clearfix">
+		<section id="main_section">
+			<!-- article.main_article*3>h2>lorem2^p>lorem30 -->
+			<article class="main_article">
+				<h2>Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem tenetur nostrum ad ut autem quis deleniti voluptas delectus impedit perspiciatis, animi aliquam enim debitis rem, sapiente ab molestias! Eveniet, ullam.</p>
+			</article>
+			<article class="main_article">
+				<h2>Facilis, totam.</h2>
+				<p>Omnis aperiam provident, commodi impedit ratione ipsa accusamus error laborum mollitia fuga, non numquam illum minus laudantium est, modi quas recusandae qui minima, vitae temporibus officiis dolore tenetur eveniet. Sequi!</p>
+			</article>
+			<article class="main_article">
+				<h2>Labore, recusandae.</h2>
+				<p>Ab similique earum rem laborum ullam facere deserunt ducimus vel, deleniti, nam laboriosam unde quas doloribus consequuntur saepe repellendus nostrum dolorem fugiat, itaque? Maiores debitis possimus quas nulla cupiditate mollitia.</p>
+			</article>
+		</section>
+		<aside id="main_aside"></aside>
+	</div>
+	<footer id="main_footer">
+		<h3>Lorem ipsum.</h3>
+		<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, iusto.</address>
+		<!-- adress태그를 사용하면 italic체로 바뀜 -->
+	</footer>
+</body>
+</html>
