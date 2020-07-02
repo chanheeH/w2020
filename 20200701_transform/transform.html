@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.bgcolorOne{background:#ddd;}
+		.bgcolorTwo{background:#f00;}
+
+		.contents{width: 1200px;margin: 0 auto;padding:100px 0;}
+		.contents>ul{}
+		.contents>ul>li{
+			float: left;width:228px;margin-right: 15px;
+			position: relative;overflow: hidden;
+		}
+		.contents>ul>li:last-child{margin-right:0;}
+		.contents>ul>li>img{width: 100%;transition:0.3s;}
+		.contents>ul>li>div.bg{
+			position:absolute;
+			width: 100%;height: 100%;
+			background:rgba(0,0,0,0.3);top:100%;transition:0.3s;
+		}
+		.contents>ul>li>div.bg>h3{
+			_background:#fff;width: 100px;line-height: 40px;
+			text-align: center;position: absolute;left: 50%;top: 50%;
+			transform:translate(-50%,-50%);color:white;
+		}
+		.contents>ul>li:hover div.bg{top:0;}
+		.contents>ul>li:hover img{transform:scale(1.2);}
+
+
+
+		/*contentsOne*/
+		.contentsOne{width: 1200px;margin: 0 auto;padding:100px 0;}
+		.contentsOne>ul>li{
+			float: left;width:228px;margin-right: 15px;
+			position: relative;overflow: hidden;
+		}
+		.contentsOne>ul>li:last-child{margin-right:0;}
+		.contentsOne>ul>li>img{width: 100%;transition:0.3s;}
+		.contentsOne>ul>li>div.bg{
+			position:absolute;
+			width: 100%;height: 100%;
+			background:rgba(0,0,0,0.3);left:-100%;top:0;transition:0.3s;
+		}
+		.contentsOne>ul>li>div.bg>h3{
+			_background:#fff;width: 100px;line-height: 40px;
+			text-align: center;position: absolute;left: 50%;top: 50%;
+			transform:translate(-50%,-50%);color:white;
+		}
+		.contentsOne>ul>li:hover div.bg{left:0;}
+		.contentsOne>ul>li:hover img{transform:scale(1.2);}
+
+
+
+		/*contentsTwo*/
+		.contentsTwo{width: 1200px;margin: 0 auto;padding:100px 0;}
+		.contentsTwo>ul>li{
+			float: left;width:228px;margin-right: 15px;
+			position: relative;overflow: hidden;
+		}
+		.contentsTwo>ul>li:last-child{margin-right:0;}
+		.contentsTwo>ul>li>img{width: 100%;transition:0.3s;}
+		.contentsTwo>ul>li>div.bg{
+			position:absolute;
+			width: 100%;height: 100%;
+			background:rgba(0,0,0,0.3);right:-100%;top:0;transition:0.3s;
+		}
+		.contentsTwo>ul>li>div.bg>h3{
+			_background:#fff;width: 100px;line-height: 40px;
+			text-align: center;position: absolute;left: 50%;top: 50%;
+			transform:translate(-50%,-50%);color:white;
+		}
+		.contentsTwo>ul>li:hover div.bg{right:0;}
+		.contentsTwo>ul>li:hover img{transform:scale(1.2);}
+
+
+
+		/*contentsThree*/
+		.contentsThree{width: 1200px;margin: 0 auto;padding:100px 0;}
+		.contentsThree>ul>li{
+			float: left;width:228px;margin-right: 15px;
+			position: relative;overflow: hidden;
+		}
+		.contentsThree>ul>li:last-child{margin-right:0;}
+		.contentsThree>ul>li>img{width: 100%;transition:0.3s;}
+		.contentsThree>ul>li>div.bg{
+			position:absolute;
+			width: 100%;height: 100%;
+			background:rgba(0,0,0,0.3);bottom:100%;transition:0.3s;
+		}
+		.contentsThree>ul>li>div.bg>h3{
+			_background:#fff;width: 100px;line-height: 40px;
+			text-align: center;position: absolute;left: 50%;top: 50%;
+			transform:translate(-50%,-50%);color:white;
+		}
+		.contentsThree>ul>li:hover div.bg{bottom:0;}
+		.contentsThree>ul>li:hover img{transform:scale(1.2);}
+	</style>
+</head>
+<body>
+	<div class="container bgcolorOne">
+		<div class="contents">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container bgcolorOne">
+		<div class="contentsOne">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container bgcolorOne">
+		<div class="contentsTwo">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container bgcolorOne">
+		<div class="contentsThree">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg">
+						<h3>여행</h3>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
