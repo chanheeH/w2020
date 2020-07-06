@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>검색</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-image: url(images/main_bg.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		.wrap{
+			position: absolute;
+			_background:skyblue;
+			width: 400px;
+			height: 50px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 1;
+		}
+		.searchInp{
+			width: 400px;
+			height: 50px;
+			border: 3px solid #000;
+			border-radius: 25px;
+			text-indent: 80px;
+			font-size: 16px;
+			font-weight: bold;
+			_box-shadow: 10px 10px 10px #ddd;
+			background-color: #fff;
+			position: relative;
+			z-index: 1;
+		}
+		.searchBtn{
+			background-image: url(images/search.jpg);
+			width: 20px;
+			height: 20px;
+			border:0 none;
+			text-indent: -9999px;
+			position: absolute;
+			right: 20px;
+			top: 15px;
+			z-index: 1;
+		}
+		.searchTitle{
+			display: block;
+			width: 60px;
+			height: 20px;
+			background-image: url(images/searchtext.jpg);
+			text-indent: -9999px;
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			z-index: 2;
+		}
+		.img01{
+			position: absolute;
+			right: -100px;
+			top: -250px;
+			animation-name: imgAni;
+			animation-duration:1.5s;
+			animation-iteration-count: infinite;
+			animation-direction:alternate;
+			_animation-timing-function: linear; /*일직선. (안버벅거림)*/
+			animation-timing-function: ease-in-out;
+			z-index: 0;
+		}
+/*		@keyframes imgAni{
+			0%{top:-250px;right: -100px;}
+			100%{top:-230px;right: -100px;}
+		}*/
+		@keyframes imgAni{
+			0%{transform: translateY(-20px);}
+			100%{transform: translateY(0px);}
+		}
+		.img00{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			animation-name: imgAniOne;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes imgAniOne{
+			0%{left: 0;bottom: 0;}
+			100%{left: 1000px;bottom: 1000px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="images/content2.png" alt="" class="img01">
+		<form action="#" method="get">
+			<label for="searchTxt" class="searchTitle">searchtitle</label>
+			<input type="text" id="searchTxt" name="search" placeholder="검색어를 입력하세요." class="searchInp">
+			<button type="submit" class="searchBtn">search</button>
+		</form>
+	</div>
+	<img src="images/reallyAir.png" alt="" class="img00">
+</body>
+</html>
