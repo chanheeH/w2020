@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hover</title>
+	<style>
+		.wrap{width: 40px;height: 40px;border: 3px solid #fff;border-radius: 20px;box-sizing: border-box;_background-color:skyblue;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);transition:0.3s;z-index: 1} /*border-radius 20px했을때 완벽한 원이 되지 않기때문에 50%를 주던지 아니면 box-sizing:border-box해야함*/
+		.wrap .bar1, .wrap .bar2{width: 25px;height: 3px;background-color: #fff;border-radius: 2px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+		.wrap .bar2{transform: translate(-50%,-50%) rotate(90deg);}
+		.photo{width: 300px;height: 300px;position: relative;overflow: hidden;}
+		.photo img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%) scale(1.2);transition: 0.3s}
+		.bg{width: 100%;height: 100%;background: #000;position: relative;opacity: 0;transition: 0.3s}
+		.photo:hover img{transform: translate(-50%,-50%) scale(1.4);}
+		.photo:hover .wrap{transform: translate(-50%,-50%) rotate(180deg);}
+		.photo:hover .bg{opacity: 0.4}
+	</style>
+</head>
+<body>
+	<div class="photo">
+		<img src="images/travel09.jpg" alt="">
+		<div class="wrap">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+		</div>
+		<div class="bg"></div>
+	</div>
+</body>
+</html>
