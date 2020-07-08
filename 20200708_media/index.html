@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>media</title>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <link rel="stylesheet" href="../css/reset.css">
+   <style>
+      ul>li img{width: 100%;}
+      ul{transition: 2s;}
+
+/*띄어쓰기 무조건*/
+      @media screen and (max-width: 576px){          /*모바일*/
+         ul>li{float: left;width: 50%;}
+      }
+      @media screen and (max-width: 577px){          /*타블렛*/
+          ul>li{float: left;width: 3.33333%;}
+      }
+      @media screen and (min-width: 923px){          /*pc*/
+         ul>li{float: left;width: 20%;}
+         .blind{display: none;}
+      }/*두개일 경우는 and () and (){} 로 사용 and랑 ()는 한칸 띄워서 사용해야 함*/
+   </style>
+</head>
+<body>
+   <ul class="clearfix">
+      <li><img src="../images/testimg.jpg" alt=""></li>
+      <li><img src="../images/testimg.jpg" alt=""></li>
+      <li><img src="../images/testimg.jpg" alt=""></li>
+      <li><img src="../images/testimg.jpg" alt=""></li>
+      <li><img src="../images/testimg.jpg" alt=""></li>
+      <li class="blind"><img src="../images/testimg.jpg" alt=""></li>
+   </ul>
+
+<!-- <style>
+   .box{width: 200px;height: 400px;background: skyblue;}
+   .box img{min-width: 100%}
+</style>
+   <div class="box">
+      <img src="../images/testimg.jpg" alt="">
+   </div> -->
+</body>
+</html>
+</body>
+</html>
