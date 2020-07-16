@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/all.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<style>
+		@media screen and (min-width: 923px){
+		.menuWrap{
+			width: 1200px;
+			height: 45px;
+			margin: 0 auto;
+			position: relative;
+			background: navy;
+		}
+		.menuWrap h1{
+			width: 150px;
+			text-align: center;
+		}
+		.menuWrap h1 a{
+			color:white;
+		}
+		.menuWrap .myTopMenu{
+			position: absolute;
+			top: 0;
+			right: 50px;
+		}
+		.myTopMenu ul li{
+			float: left;
+			padding-right: 20px;
+		}
+		.myTopMenu ul li a{
+			color:white;
+			display: block;
+			line-height: 45px;
+		}
+		.toggleMenu{display: none;}
+	}
+		@media screen and (min-width: 577px) and (max-width: 922px){
+			.menuWrap{
+			width: 1200px;
+			height: 45px;
+			margin: 0 auto;
+			position: relative;
+			background: navy;
+		}
+		.menuWrap h1{
+			width: 150px;
+			text-align: center;
+		}
+		.menuWrap h1 a{
+			color:white;
+		}
+		.menuWrap .myTopMenu{
+			position: absolute;
+			top: 0;
+			right: 50px;
+		}
+		.myTopMenu ul li{
+			float: left;
+			padding-right: 20px;
+		}
+		.myTopMenu ul li a{
+			color:white;
+			display: block;
+			line-height: 45px;
+		}
+		.toggleMenu{display: none;}
+		}
+		@media screen and (max-width: 576px){
+			.menuWrap{
+			width: 100%;
+			height: 45px;
+			margin: 0 auto;
+			position: relative;
+			background: navy;
+		}
+		.menuWrap h1{
+			width: 150px;
+			text-align: center;
+		}
+		.menuWrap h1 a{
+			color:white;
+		}
+		.menuWrap .myTopMenu{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background: orange;
+			top: -100%;
+		}
+		.topNav{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%);
+		}
+		.myTopMenu ul li{
+			float: none;
+		}
+		.myTopMenu ul li a{
+			color:white;
+			display: block;
+			line-height: 45px;
+		}
+		.toggleMenu{display: block;}
+		}
+
+		/*toggleMenu*/
+		.toggleMenu{
+			width: 30px;
+			height: 28px;
+			border: 1px solid #fff;
+			position: absolute;
+			right: 20px;
+			top: 8px;
+			border-radius: 5px;
+		}
+		.toggleMenu div{
+			width: 17px;
+			height: 3px;
+			background-color: #fff;
+			position: absolute;
+			left: 5.5px;
+			border-radius: 3px;
+		}
+		.toggleMenu .bar1{
+			top: 6px;
+		}
+		.toggleMenu .bar2{
+			top: 11px;
+		}
+		.toggleMenu .bar3{
+			top: 16px;
+		}
+		.change .bar1{
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%) rotate(-45deg);
+		}
+		.change .bar2{
+			opacity: 0;
+		}
+		.change .bar3{
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%) rotate(45deg);
+		}
+		.visual	img{width: 100%;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				console.log($(this).attr("class"));
+				var toggle = $(this).attr("class");
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$(".myTopMenu").stop().animate({top:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$(".myTopMenu").stop().animate({top:"-100%"},300);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="menuWrap">
+		<h1><a href="#">logo</a></h1>
+		<div class="myTopMenu">
+			<nav class="topNav">
+				<ul class="clearfix">
+					<li><a href="#"><i class="fas fa-carrot"></i> menu1</a></li>
+					<li><a href="#"><i class="fas fa-apple-alt"></i> menu2</a></li>
+					<li><a href="#"><i class="fas fa-lemon"></i> menu3</a></li>
+					<li><a href="#"><i class="fas fa-pepper-hot"></i> menu4</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+	</div>
+	<div class="visual">
+		<img src="../images/pc02.jpg" alt="">
+	</div>
+</body>
+</html>

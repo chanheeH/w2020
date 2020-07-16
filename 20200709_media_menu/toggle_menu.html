@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>toggle menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/all.css"> <!-- font awesome -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<style>
+		@media screen and (min-width:923px){
+		div.menuWrap{
+			width: 1200px;
+			height: 45px;
+			margin: 0 auto;
+			position: relative;
+			background: #333;
+		}
+		div.menuWrap h1{
+			width: 150px;
+			text-align: center;
+		}
+		div.menuWrap h1 a{
+			color:white;
+		}
+		div.menuWrap .myTopMenu{
+			position: absolute;
+			top: 0;
+			right: 50px;
+		}
+		.myTopMenu ul li{
+			float: left;
+			padding-right: 20px;
+		}
+		.myTopMenu ul li a{
+			color:white;
+			display: block;
+			line-height: 45px;
+		}
+		.toggleMenu{display: none;}
+	}
+	@media screen and (min-width: 577px) and (max-width: 922px){
+		div.menuWrap{
+			width: 1200px;
+			height: 45px;
+			margin: 0 auto;
+			position: relative;
+			background: #333;
+		}
+		div.menuWrap h1{
+			width: 150px;
+			text-align: center;
+		}
+		div.menuWrap h1 a{
+			color:white;
+		}
+		div.menuWrap .myTopMenu{
+			position: absolute;
+			top: 0;
+			left: 200px;
+		}
+		.myTopMenu ul li{
+			float: left;
+			padding-right: 20px;
+		}
+		.myTopMenu ul li a{
+			color:white;
+			display: block;
+			line-height: 45px;
+		}
+		.toggleMenu{display: none;}
+	}
+	@media screen and (max-width: 576px){
+		div.menuWrap{
+			width: 100%;
+			height: 45px;
+			margin: 0 auto;
+			position: relative;
+			background: #333;
+		}
+		div.menuWrap h1{
+			width: 150px;
+			text-align: center;
+		}
+		div.menuWrap h1 a{
+			color:white;
+		}
+		div.menuWrap .myTopMenu{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background:orange;
+			top: -100%;
+		}
+		.topNav{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%);
+		}
+		.myTopMenu ul li{
+			float:none;
+		}
+		.myTopMenu ul li a{
+			color:white;
+			display: block;
+			line-height: 45px;
+		}
+		.toggleMenu{display: block;}
+	}
+	
+		/*toggleMenu*/
+		.toggleMenu{
+			width: 30px;
+			height: 28px;
+			border: 1px solid #fff;
+			position: absolute;
+			right: 20px;
+			top: 8px;
+			border-radius: 5px;
+		}
+		.toggleMenu div{
+			width: 17px;
+			height: 3px;
+			background-color: #fff;
+			position: absolute;
+			left: 5.5px; /*주로 toggleMenu width - toggleMenu div width 의 반*/
+			border-radius: 3px;
+		}
+		.toggleMenu div.bar1{
+			top: 6px;
+		}
+		.toggleMenu div.bar2{
+			top: 11px;
+		}
+		.toggleMenu div.bar3{
+			top: 16px;
+		}
+		.change div.bar1{
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%) rotate(-45deg);
+		}
+		.change div.bar2{
+			opacity:0;
+		}
+		.change div.bar3{
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%) rotate(45deg);
+		}
+		.visual img{width: 100%;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				console.log($(this).attr("class"));
+				var toggle = $(this).attr("class");
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$(".myTopMenu").stop().animate({top:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$(".myTopMenu").stop().animate({top:"-100%"},300);
+				}
+			});
+		});
+		$(window).resize(function(){
+			var wSize = $(window).width();
+			console.log(wSize);
+
+			if(wSize > 576){
+				$(".myTopMenu").css("top",0);
+				$(".toggleMenu").removeClass("change");
+			}else{
+				$(".myTopMenu").css("top","-100%");
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="menuWrap clearfix">
+		<h1><a href="#">logo</a></h1>
+		<div class="myTopMenu">
+			<nav class="topNav">
+				<ul class="clearfix">
+					<li><a href="#"><i class="fab fa-amazon"></i> COMPANY</a></li>
+					<li><a href="#"><i class="fas fa-beer"></i> PRODUCT</a></li>
+					<li><a href="#"><i class="fas fa-comment"></i> CONTACT</a></li>
+				</ul>			
+			</nav>
+		</div> <!-- myTopMenu -->
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div> <!-- toggleMenu -->
+	</div> <!-- menuWrap -->
+	<div class="visual">
+		<img src="../images/pc01.jpg" alt="">
+	</div>
+	<div style="height:1000px"></div>
+	<div>
+		<h1>
+			<a href="#" onclick="return false">test</a>
+			<a href="javascript:void(0)">test1</a>
+		</h1> <!-- a태그 사용 시 맨 위로 올라가는걸 방지하기 위해 사용. 둘 중 하나 쓰면 됨 -->
+	</div>
+</body>
+</html>
