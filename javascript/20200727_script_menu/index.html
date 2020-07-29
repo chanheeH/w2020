@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>script menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		html,body{height: 100%;}
+		/*이걸 넣어줘야 화면 꽉차게 들어가고 아니면 그냥 자동으로 height가 정해지기 때문에 화면에 꽉 차지 않음*/
+		.view{
+			width: 100%;
+			height: 100%;
+			background:skyblue;
+			position: relative;
+			left: -100%;
+			transition:0.3s;
+		}
+		.view h3{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		/*toggleMenu*/
+		.toggleMenu{
+			width: 30px;
+			height: 30px;
+			border: 1px solid #000;
+			position: absolute;
+			right: 20px;
+			top: 8px;
+			border-radius: 5px;
+			z-index: 1;
+		}
+		.toggleMenu div{
+			width: 17px;
+			height: 3px;
+			background-color: #000;
+			position: absolute;
+			left: 5.5px;
+			border-radius: 3px;
+		}
+		.toggleMenu div.bar1{top: 7px;}
+		.toggleMenu div.bar2{top: 12px;}
+		.toggleMenu div.bar3{top: 17px;}
+		.toggleMenu.change div.bar1{
+			left: 50%;	
+			top: 50%;
+			transform: translate(-50%,-50%) rotate(-45deg);
+		}
+		.toggleMenu.change div.bar2{opacity: 0;}
+		.toggleMenu.change div.bar3{
+			left: 50%;	
+			top: 50%;
+			transform: translate(-50%,-50%) rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<!-- sciprt를 문서 위쪽에 작성하고 싶을 시 바디에 onload="init()" 넣고 위에 script에 function init() 넣어야하고 원래는 문서를 읽고 script를 만들어야하기 때문에 문서 밑에 써야함 -->
+	<div class="toggleMenu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<div class="view">
+		<h3>MENU ZONE</h3>
+	</div>
+	<script>
+		var tMenu = document.querySelectorAll(".toggleMenu");
+		// tag,class,id,속성값 다 넣을 수 있음
+		var view = document.getElementsByClassName("view");	
+		// class만 가능
+		// tMenu[0].onclick = change; //click event 등록
+		// tMenu[0].addEventListener("이벤트이름",함수이름); addEventListener method 이벤트 등록
+		tMenu[0].addEventListener("click",change);
+		// 위 두개는 밑에 function change 해야함)
+		// tMenu[0].onclick = function(){
+		// 	var toggle = tMenu[0].getAttribute("class");
+		// 	//attr("class") <- 이건 jquery
+		// 	if(toggle == "toggleMenu"){
+		// 		tMenu[0].setAttribute("class","toggleMenu change");
+		// 		view[0].style.left = "0";
+
+		// 	}else{
+		// 		tMenu[0].setAttribute("class","toggleMenu");
+		// 		view[0].style.left = "-100%";
+		// 	}
+		// }
+		function change(){
+			var toggle = tMenu[0].getAttribute("class");
+			//attr("class") <- 이건 jquery
+			if(toggle == "toggleMenu"){
+				tMenu[0].setAttribute("class","toggleMenu change");
+				view[0].style.left = "0";
+
+			}else{
+				tMenu[0].setAttribute("class","toggleMenu");
+				view[0].style.left = "-100%";
+			}
+		}
+	</script>
+</body>
+</html>

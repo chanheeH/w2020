@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>array</title>
+</head>
+<body>
+	<script>
+		var num = [10,20,30,40,50,60];
+		console.log("배열의 개수 : "+num.length);
+		// alert();
+		// document.write();
+
+		num[0] = 15;
+		num[6] = 100;
+		num[10] = 111;
+		// (위에 배열 개수가 6개이기 때문에 7,8,9는 undefined 로 나오고 f12 console 창에서 확인 가능)
+
+		for(var i=0;i<num.length;i++){
+			document.write("배열데이터["+ i +"] = " + num[i] + "<br>")
+		}
+
+		var img = ["pc01.jpg","pc02.jpg","pc03.jpg"];
+		var imgTxt = ["우주1","우주2","우주3"];
+		for(var i=0;i<img.length;i++){
+			document.write("<div class='box" + i+ "'>");
+			document.write("<img src='../../w2020/images/" + img[i] + "'>");
+			document.write("<p>"+imgTxt[i]+"</p>");
+			document.write("</div>")
+		}
+	</script>
+</body>
+</html>

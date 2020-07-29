@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <button type="button" onclick="alerBtn()">경고</button>
+   <input type="text" id="input" value="포커스 되는곳">
+   <script>
+      function alerBtn(){
+         var text = "안녕하세요\n";
+         text += "만나서 반갑습니다\n";
+         text += "저는 강민우 입니다"
+         alert(text);
+
+         document.getElemenById("input").focus();
+      }
+
+   </script> 
+   
+</body>
+</html>

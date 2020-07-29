@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		ul{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		ul>li{
+			float: left;
+			width: 240px;
+			background:pink;
+			line-height: 40px;
+			text-align: center;
+			border: 1px solid #000;
+		}
+		.boxWrap{
+			width: 1200px;
+			margin: 0 auto;
+			border: 1px solid #000;
+			padding: 20px;
+		}
+		.boxWrap .box2,
+		.boxWrap .box3,
+		.boxWrap .box4,
+		.boxWrap .box5{
+			display: none;
+		}
+		ul>li:hover{
+			background:orange;
+			cursor: pointer;
+		}
+		.active{
+			background:green;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("ul>li").click(function(){
+				var liNum = $(this).index();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+				$(".boxWrap>div").hide();
+				$(".boxWrap>div").eq(liNum).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<ul class="clearfix">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+	<div class="boxWrap">
+		<div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis explicabo voluptatum sed vel tempore necessitatibus doloremque quibusdam accusamus, error dicta.</div>
+		<div class="box2">2. Optio tempora quae culpa quasi architecto expedita ducimus libero officia, eius totam, tenetur maiores cumque! Eveniet voluptatum natus ratione, suscipit.</div>
+		<div class="box3">3. Temporibus, fugit sapiente cupiditate nobis tenetur officiis tempore possimus quam voluptas pariatur. Quisquam, accusamus veritatis corporis, nostrum id aliquam sunt.</div>
+		<div class="box4">4. Quia, dolores. Totam, quod, est. Unde iusto minima dolorum. Fugit consequatur nihil odio sit natus ducimus, ipsa nesciunt possimus nisi!</div>
+		<div class="box5">5. Eius, rerum! Dolor, unde. Vero provident velit quam nihil, id, vel aliquam a eius dignissimos in adipisci molestiae dolore voluptatem.</div>
+	</div>
+</body>
+</html>

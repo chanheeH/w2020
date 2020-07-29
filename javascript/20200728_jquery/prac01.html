@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		ul{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		ul>li{
+			float: left;
+			width: 200px;
+			border: 1px solid #000;
+			text-align: center;
+			line-height: 40px;
+			background:green;
+		}
+		.boxWrap{
+			width: 1000px;
+			margin: 0 auto;
+			border: 1px solid #000;
+			padding: 20px;
+		}
+		.boxWrap .box2,
+		.boxWrap .box3,
+		.boxWrap .box4,
+		.boxWrap .box5{
+			display: none;
+		}
+		ul>li:hover{
+			background:pink;
+			cursor: pointer;
+		}
+		.active{
+			background:yellow;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("ul>li").click(function(){
+				var liNum = $(this).index();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+				$(".boxWrap>div").hide();
+				$(".boxWrap>div").eq(liNum).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<ul class="clearfix">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+	<div class="boxWrap">
+		<!-- div.box$*5>{$. }+lorem20 -->
+		<div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut impedit illum porro natus vel, iste eligendi quis quasi dignissimos dolorem!</div>
+		<div class="box2">2. Consequuntur doloremque nihil modi maxime, laborum facilis voluptas, cum, incidunt blanditiis mollitia eaque consequatur nulla dolor iusto molestias porro alias.</div>
+		<div class="box3">3. Ratione harum unde corporis enim, dicta, odit voluptatum velit fuga aliquam accusantium aspernatur ab vitae veniam doloribus eveniet reprehenderit laborum.</div>
+		<div class="box4">4. Possimus similique deserunt illo, cum, amet sequi nam numquam fugit, provident iusto ea recusandae quos voluptatem doloribus porro aperiam incidunt!</div>
+		<div class="box5">5. Soluta a cumque, laborum illum quas perspiciatis qui provident sunt beatae quos quis dolorem deleniti doloribus laudantium quae accusantium consequatur!</div>
+	</div>
+</body>
+</html>

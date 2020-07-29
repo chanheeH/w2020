@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+<body>
+	<script>
+		var kdata=["서울","부산","청주","대구"];
+
+		kdata.forEach(printArr);//함수이름
+		function printArr(item,index){
+			document.write(index + ". " + item + "<br>");
+		}
+
+		function printArrOne(){
+			for(var i=0;i<kdata.length;i++){
+				// var num = i + 1;
+				// document.write(num + ". " + kdata[i] + "<br>");
+				document.write(i + 1 + ". " + kdata[i] + "<br>");
+				// 위 두개의 document.write는 똑같이 입력되지만 위에꺼는 var num을 지정해 주어야 함
+			}
+		}
+		printArrOne(); //함수실행
+
+		var data = [10,20,30,40,30,60,70,30,90,100];
+		document.write(data + "<br>");
+		document.write(data.indexOf(30) + "<br>");
+		document.write(data.lastIndexOf(30) + "<br>");
+		document.write(data.indexOf(30,3) + "<br>"); //위 data 순서가 0,1,2,3 순서인데 3번째 순서 다음에 있는 30을 찾을 때 사용. (다 index값만 가져옴)
+		document.write(data.indexOf(300)); //data가 없기 때문에 -1로 표시됨.
+	</script>
+</body>
+</html>
