@@ -109,6 +109,7 @@ div#wrap{
 	position: relative;
 	left: 50px;
 	top: 14px;
+	display: none;
 }
 #content fieldset .field.birth label{
 	float: left;
