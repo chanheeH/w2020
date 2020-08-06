@@ -34,11 +34,12 @@
 			var nEnd = nStart + objBar.width() - objCar.width();
 			var nStep = 2;
 			var nCurrent = nStart;
+			var nTimerId = 0;
 
 			function carMove(){
 				// nCurrent = nCurrent + nStep;
 				nCurrent += nStep;
-				console.log(nCurrent);
+				// console.log(nCurrent);
 
 
 				if(nCurrent > nEnd){
@@ -46,8 +47,8 @@
 					objCar.addClass("rotate")
 				}
 				if(nCurrent < nStart){
-					nStep = 0;
-					// 2 하면 왔다가 갔다가
+					nStep = 2;
+					// 0 하면 한번 왔다가 갔다가
 					objCar.removeClass("rotate")
 				}
 
@@ -56,8 +57,22 @@
 			};
 
 
-			setInterval(carMove,30);
-		});
+			// setInterval(carMove,30);
+
+			$(".btn_start").click(function(){
+				if(nTimerId == 0){
+				nTimerId = setInterval(carMove,30);
+				alert("자동차가 움직입니다.");
+				}
+				console.log(nTimerId);
+			});
+			$(".btn_stop").click(function(){
+				if(nTimerId != 0){
+				clearInterval(nTimerId);
+				nTimerId = 0;
+				}
+			});
+		}); // document.ready
 	</script>
 </head>
 <body>
@@ -65,5 +80,7 @@
 		<div class="bar"></div>
 		<div id="car"><img src="../../images/car.png" alt=""></div>
 	</div>
+	<button class="btn_start">시작</button>
+	<button class="btn_stop">정지</button>
 </body>
 </html>
