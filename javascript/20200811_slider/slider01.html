@@ -15,13 +15,15 @@
 			var banner = $("#wrapper li");
 
 			function banMove(){
-				
-
-				banner.eq(current).css("left","0").animate({left:"-100%"},400);
+				move(current,"0","-100%");
+				// banner.eq(current).css("left","0").animate({left:"-100%"},400);
 				current++;  //current = current + 1;
 				if(current == 3){current=0;}
-				banner.eq(current).css("left","100%").animate({left:0},400);
-
+				move(current,"100%","0");
+				// banner.eq(current).css("left","100%").animate({left:0},400);
+			}
+			function move(i,start,end){
+				banner.eq(i).css("left",start).animate({left:end},400);
 			}
 			//banMove();
 			setInterval(banMove,2000);
