@@ -16,37 +16,42 @@
       // 5. current banner dom을 구하고 애니메이션 실행
       // 6. next banner dom을 구하고 애니메이션 실행
       // 7. if(i==3) i=0; i값 제어
+      // 8. 함수 내의 i값을 current에 대입 (current = i;)
 
-
+      
+      //overBtn은 버튼을 연속 눌렀을 때에 겹쳐서 이상하게 나오는 오류를 정상적으로 하나씩 나오게 함
 
 
       $(function(){
          var current = 0;
          var banner = $("#wrapper li");
          var i;
-         
+         var overBtn = false;
+
          function slideNext(){
             // current++;
             
-            i = current + 1; //다음배너값구하기 current 0 1 2 
-            if(i==3){
-               i = 0;
+            if(overBtn == false){
+               overBtn = true;
+               i = current + 1; //다음배너값구하기 current 0 1 2 
+               if(i==3){
+                  i = 0;
+               }
+               slideView("next")
             }
-
-            var currentEl = banner.eq(current); //현재 배너
-            var nextEl = banner.eq(i); // 다음배너
-
-            currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
-            nextEl.css({left:"100%"}).stop().animate({left:0},1000);
-
-            current = i; //최종 현재값
-            console.log(current);
-
+             // console.log(current);
          }
          function slidePrev(){
-            current--;
-            console.log(current);
+
+            if(overBtn == false){
+               overBtn = true;
+               i = current - 1;
+               if(i==-1){i=2;}
+               
+               slideView("prev");
+            }
          }
+
 
          $(".bt_next").click(function(){
             slideNext();
@@ -55,6 +60,25 @@
          $(".bt_prev").click(function(){
             slidePrev();
          });
+         function slideView(view){
+            var currentEl = banner.eq(current); //현재 배너
+               var nextEl = banner.eq(i); // 다음배너
+
+               if(view == "prev"){
+                  currentEl.css({left:0}).stop().animate({left:"100%"},1000,function(){overBtn=false;});
+                  nextEl.css({left:"-100%"}).stop().animate({left:0},1000);
+               }else{
+                  currentEl.css({left:0}).stop().animate({left:"-100%"},1000,function(){overBtn=false;});
+                  nextEl.css({left:"100%"}).stop().animate({left:0},1000);
+               }
+               current = i; //최종 현재값
+         }
+
+         function trigger(){
+            $(".bt_next").trigger("click");
+         }
+         setInterval(trigger,3000);//1000 = 1초
+
       });
    </script>
    <style>
