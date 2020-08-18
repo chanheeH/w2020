@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>video</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{
+			height: 100%;
+		}
+		#myVideo{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover
+		}
+	</style>
+</head>
+<body>
+	<video id="myVideo" autoplay loop muted width="426" height="240">
+		<source src="video.mp4" type="video/mp4">
+	</video>
+	<!-- <video src="video.mp4"></video> 이렇게 사용 시 브라우저 별로 나오는 형식이 달라질 수 있음 -->
+</body>
+</html>
