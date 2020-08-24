@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script>
+		$(function(){
+
+		
+		});
+	</script>
+	<style>
+		
+
+
+
+		.f3em{font-size:3em !important}
+		.f25em{font-size:2.5em !important}
+		.f2em{font-size:2em !important}
+		.f15em{font-size:1.5em !important}
+		.mb20{margin-bottom: 20px !important;}
+	</style>
+</head>
+<body>
+	<style>
+		body,html{height:100%;margin: 0;padding: 0;overflow: hidden;background-color: #000;}
+			#screen{width: 100%;height: 100%;position: relative;}
+			.wPaint{width: 150%;height: 100%;}
+			.bgWrap{width: 120%;height: 120%;
+				background-image: url(images/parallax/background.jpg);
+				background-repeat: no-repeat;
+			background-position: center;
+			background-size:cover;}
+
+			.wPaint div{
+				position: absolute;width: 100%;height: 400px;position: absolute;
+			}
+
+			.wall01{
+				
+				background: url(images/parallax/wave-paint.png) repeat-x;
+				bottom:-150px;left:-300px;
+				animation:wave01 0.8s alternate infinite;
+			}
+
+			.wall02{
+				
+				background: url(images/parallax/wave-plain.png) repeat-x;
+				bottom:-100px;left:-100px;
+				animation:wave02 0.8s alternate infinite;
+			}
+			.wall03{
+				
+				background: url(images/parallax/wave-plain.png) repeat-x;
+				bottom:-40px;left:-300px;
+				animation:wave03 0.8s alternate infinite;
+			}
+
+
+			@keyframes wave01{
+				from{transform:translateX(10px);}
+				from{transform:translateX(50px);}
+			}
+			@keyframes wave02{
+				from{transform:translateX(50px);}
+				from{transform:translateX(10px);}
+			}
+			@keyframes wave03{
+				from{transform:translateX(50px);}
+				from{transform:translateX(10px);}
+			}
+
+		</style>
+		
+			<div id="screen">
+				<div class="bgWrap" data-depth="0.1"></div>
+				<div class="wPaint" data-depth="0.2">
+					<div class="wall03"></div>
+				</div>
+				<div class="wPaint" data-depth="0.4">
+					<div class="wall02"></div>
+				</div>
+				<div class="wPaint" data-depth="0.6">
+					<div class="wall01"></div>
+				</div>
+				
+			</div>
+			
+		
+		
+		<script type="text/javascript"> 
+		var screen = document.getElementById("screen"); 
+		var parallax = new Parallax(screen);
+
+		</script>
+</body>
+</html>
