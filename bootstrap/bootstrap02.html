@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	<!-- <script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.bg-sky{background-color:skyblue;}
+	</style>
+</head>
+<body>
+	<!-- p-0, pb-0, pt-0, pl-0, pr-0
+	0 - sets margin or padding to 0
+	1 - sets margin or padding to .25rem (4px if font-size is 16px)
+	2 - sets margin or padding to .5rem (8px if font-size is 16px)
+	3 - sets margin or padding to 1rem (16px if font-size is 16px)
+	4 - sets margin or padding to 1.5rem (24px if font-size is 16px)
+	5 - sets margin or padding to 3rem (48px if font-size is 16px)
+ 	-->
+	<div class="bg-sky pt-3 pb-3">
+		<div class="container bg-info">
+			<!-- container-fluid 하면 전체꽉참 -->
+			<div class="row text-center text-light">
+				<div class="col-md-6 bg-danger">Lorem.1</div>
+				<div class="col-md-6 bg-primary">Lorem.2</div>
+				<div class="col-md-12 bg-dark">Lorem.3</div>
+				<div class="col-md-12 bg-light text-dark">Lorem.4</div>
+				<!-- sm:small -->
+				<!-- md:medium -->
+				<!-- lg:large -->
+				<!-- col은 전체크기, sm,md,lg뒤에 있는 숫자는 col에 따라 좌우됨. col-12 col-md-6이면 전체12에 md일때 50%라는 소리 -->
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="#home" class="nav-link active" data-toggle="tab">home</a>
+				</li>
+				<li class="nav-item">
+					<a href="#menu1" class="nav-link" data-toggle="tab">menu1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#menu2" class="nav-link" data-toggle="tab">menu2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#menu3" class="nav-link" data-toggle="tab">menu3</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div id="home" class="tab-pane active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto architecto voluptatum, incidunt reprehenderit nulla placeat nesciunt, voluptatibus, quasi doloremque, ab quibusdam animi eum perferendis fugit harum vel laboriosam quam.</div>
+				<div id="menu1" class="tab-pane fade">Vitae amet nisi accusamus. Quis veniam ullam fugit, iusto ipsa adipisci, ipsam sunt qui impedit, cupiditate quidem tenetur asperiores? Id labore nihil necessitatibus fugit, asperiores maiores blanditiis vel nisi praesentium.</div>
+				<div id="menu2" class="tab-pane fade">Excepturi voluptas totam, est aliquam ad accusantium perspiciatis, quasi ipsa veritatis quam repudiandae fugit odit labore sapiente placeat ut, a nulla in rem, corporis nemo cum. Perferendis ducimus, qui consequatur!</div>
+				<div id="menu3" class="tab-pane fade">Totam corrupti, iusto omnis numquam quos quam nulla iure, cum cupiditate quod? Esse vel, sint veritatis deserunt aliquam fugiat. Ut alias adipisci officia tempore inventore iusto commodi sunt dignissimos minima?</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.bg-img1{background:url(images/pc01.jpg) center ;}
+	</style>
+	<div class="container pl-0 pr-0">
+		<div class="jumbotron bg-img1 text-light">
+	  		<h1>Bootstrap Tutorial</h1>
+	  		<p>Bootstrap is the most popular HTML, CSS...</p>
+		</div>
+	</div>
+
+
+
+	<div class="container mb-4">
+		<div class="row">
+
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div> <!-- row end -->
+	</div> <!-- container end -->
+	<div class="bg-sky py-3">
+		<div class="container">
+			<h2 class="text-center mb-5">gallery</h2>
+		<div class="row">
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 mb-3 mb-sm-0">
+				<div class="card">
+					<img src="images/testimg.jpg" class="card-img-top" alt="">
+					<div class="card-body">
+						<h4 class="card-title">Lorem</h4>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur.</p>
+						<button type="button" class="btn btn-primary">link</button>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			</div> <!-- row end -->
+		</div> <!-- container end -->
+	</div> <!-- bg-color -->
+	<div style="height:500px"></div>
+</body>
+</html>
